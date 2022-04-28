@@ -1,29 +1,33 @@
 import { StyleSheet, Text, View } from "react-native";
 import Button from "../components/Button";
+import Header from "../components/Header";
 export default function Home() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Bienvenu</Text>
-      <Text style={styles.title}>Daniel</Text>
-      <Text style={styles.text}>54034088</Text>
-      <View style={styles.btnGroup}>
-        <Button title="Recharge Airtime" />
-        <Button outlined title="Purchase Data" />
-      </View>
-      <View style={styles.transactions}>
-        <Text style={styles.transTitle}>Last Transactions</Text>
-        {[0, 1, 2].map((tran, i) => (
-          <View key={tran + i} style={styles.transCard}>
-            <View style={styles.transGroup}>
-              <Text style={styles.lgText}>Airtime Recharge</Text>
-              <Text style={styles.lgText}> 3,000 </Text>
+    <View>
+      <Header />
+      <View style={styles.container}>
+        <Text style={styles.text}>Bienvenu</Text>
+        <Text style={styles.title}>Daniel</Text>
+        <Text style={styles.text}>54034088</Text>
+        <View style={styles.btnGroup}>
+          <Button title="Recharge Airtime" />
+          <Button outlined title="Purchase Data" />
+        </View>
+        <View style={styles.transactions}>
+          <Text style={styles.transTitle}>Last Transactions</Text>
+          {[0, 1, 2].map((tran, i) => (
+            <View key={tran + i} style={styles.transCard}>
+              <View style={styles.transGroup}>
+                <Text style={styles.lgText}>Airtime Recharge</Text>
+                <Text style={styles.lgText}> 3,000 </Text>
+              </View>
+              <View style={styles.transGroup}>
+                <Text style={styles.smText}>MTN</Text>
+                <Text style={styles.smText}> 2 hours</Text>
+              </View>
             </View>
-            <View style={styles.transGroup}>
-              <Text style={styles.smText}>MTN</Text>
-              <Text style={styles.smText}> 2 hours</Text>
-            </View>
-          </View>
-        ))}
+          ))}
+        </View>
       </View>
     </View>
   );
@@ -53,7 +57,7 @@ export const styles = StyleSheet.create({
   },
 
   text: {
-    marginBottom: "20px",
+    marginBottom: "10px",
     fontSize: "1.1rem",
   },
 

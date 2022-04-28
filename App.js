@@ -10,7 +10,7 @@ export default function App() {
     // <Login />
     // <Register />
     // <Home />
-    // <Airtime />
-    <InternetData />
+    <Airtime />
+    // <InternetData />
   );
 }
