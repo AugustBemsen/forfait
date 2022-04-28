@@ -14,8 +14,15 @@ Platform:
   linux x64
 
 Trace: 
-  Error: connect EHOSTUNREACH 104.16.27.35:443
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)
+  Error: connect ENETUNREACH 104.16.18.35:443 - Local (0.0.0.0:0)
+      at internalConnect (node:net:916:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:433:18)
+      at emitLookup (node:net:1060:9)
+      at /usr/share/yarn/lib/cli.js:107524:28
+      at /usr/share/yarn/lib/cli.js:107433:13
+      at RawTask.module.exports.RawTask.call (/usr/share/yarn/lib/cli.js:83614:19)
+      at flush (/usr/share/yarn/lib/cli.js:83696:29)
+      at processTicksAndRejections (node:internal/process/task_queues:78:11)
 
 npm manifest: 
   {

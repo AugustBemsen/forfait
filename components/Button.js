@@ -1,7 +1,8 @@
 import React from "react";
 import { Text, StyleSheet, Pressable } from "react-native";
 
-export default function Button({ onPress, title, outlined }) {
+export default function Button(props) {
+  const { onPress, title, outlined = false } = props
   return (
     <Pressable
       style={outlined ? styles.outlined : styles.filled}
