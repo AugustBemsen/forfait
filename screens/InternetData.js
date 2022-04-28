@@ -5,9 +5,6 @@ import { purchaseStyles } from "./Airtime";
 
 export default function InternetData() {
   return (
-    <View>
-      <Header />
-
       <View style={purchaseStyles.container}>
         <View style={{ width: "100%" }}>
           <Text style={purchaseStyles.title}>Internet Data</Text>
@@ -42,6 +39,5 @@ export default function InternetData() {
           />
         </View>
       </View>
-    </View>
   );
 }

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
 
-export default function Login() {
+export default function Login({ navigation }) {
   return (
     <View style={authStyles.container}>
       <View style={{ width: "100%" }}>
@@ -26,6 +26,7 @@ export default function Login() {
           style={authStyles.btn}
           color="#FF9A02"
           accessibilityLabel="Login"
+          onPress={() => navigation.navigate("Home")}
         />
         <Text style={authStyles.note}>Not having an account? register</Text>
       </View>

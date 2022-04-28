@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import Button from "../components/Button";
 import Header from "../components/Header";
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <View>
       <Header />
@@ -10,8 +10,15 @@ export default function Home() {
         <Text style={styles.title}>Daniel</Text>
         <Text style={styles.text}>54034088</Text>
         <View style={styles.btnGroup}>
-          <Button title="Recharge Airtime" />
-          <Button outlined title="Purchase Data" />
+          <Button
+            onPress={() => navigation.navigate("Airtime")}
+            title="Recharge Airtime"
+          />
+          <Button
+            onPress={() => navigation.navigate("Data")}
+            outlined
+            title="Purchase Data"
+          />
         </View>
         <View style={styles.transactions}>
           <Text style={styles.transTitle}>Last Transactions</Text>

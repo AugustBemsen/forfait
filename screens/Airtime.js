@@ -4,8 +4,6 @@ import Select from "../components/Select";
 
 export default function Airtime() {
   return (
-    <View>
-      <Header />
 
       <View style={purchaseStyles.container}>
         <View style={{ width: "100%" }}>
@@ -37,7 +35,6 @@ export default function Airtime() {
             accessibilityLabel="Login"
           />
         </View>
-      </View>
     </View>
   );
 }
