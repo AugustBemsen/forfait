@@ -52,7 +52,7 @@ export const authStyles = StyleSheet.create({
   },
 
   inputGroup: {
-    marginBottom: "3rem",
+    marginBottom: "2.8rem",
     width: "100%",
   },
 
@@ -74,7 +74,10 @@ export const authStyles = StyleSheet.create({
   },
 
   note: {
-    marginTop: "1.5rem"
-  }
+    marginTop: "1.5rem",
+  },
 
+  btn: {
+    padding: "4rem",
+  },
 });

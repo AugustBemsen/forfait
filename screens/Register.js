@@ -38,7 +38,7 @@ export default function Register() {
           />
         </View>
         <Button
-          title="Login"
+          title="Register"
           style={authStyles.btn}
           color="#FF9A02"
           accessibilityLabel="Login"
