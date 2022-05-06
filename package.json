@@ -10,18 +10,24 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@mono.co/connect-react-native": "^0.2.0",
     "@react-native-picker/picker": "^2.4.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
+    "axios": "^0.27.2",
     "expo": "~44.0.0",
     "expo-status-bar": "~1.2.0",
+    "firebase": "^9.7.0",
+    "global": "^4.4.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.3.1",
     "react-native": "0.64.3",
     "react-native-safe-area-context": "^4.2.4",
     "react-native-screens": "^3.13.1",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "sharp-cli": "^1.15.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -2,6 +2,7 @@
   "expo": {
     "name": "forfait",
     "slug": "forfait",
+    "privacy": "public",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -26,7 +27,14 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "build": {
+        "babel": {
+          "include": ["galio-framework"]
+        }
+      }
+    },
+    "description": "Buy Airtime Online in Benin",
+    "githubUrl": "https://github.com/AugustBemsen/forfait"
   }
 }

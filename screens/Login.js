@@ -1,37 +1,57 @@
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import { useState } from "react";
+import Flash from "./Flash";
 
 export default function Login({ navigation }) {
-  return (
-    <View style={authStyles.container}>
-      <View style={{ width: "100%" }}>
-        <Text style={authStyles.title}>Login</Text>
-        <View style={authStyles.inputGroup}>
-          <Text style={authStyles.label}>Phone Number</Text>
-          <TextInput
-            keyboardType="number-pad"
-            style={authStyles.input}
-            placeholder="Phone Number"
-          />
+  const [load, setLoad] = useState(true);
+
+  const screenTOShow = () => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 3000);
+    if (load) {
+      return <Flash />;
+    } else {
+      return (
+        <View style={authStyles.container}>
+          <View style={{ width: "100%" }}>
+            <Text style={authStyles.title}>Login</Text>
+            <View style={authStyles.inputGroup}>
+              <Text style={authStyles.label}>Email</Text>
+              <TextInput
+                keyboardType="email-address"
+                style={authStyles.input}
+                placeholder="Enter Email"
+              />
+            </View>
+            <View style={authStyles.inputGroup}>
+              <Text style={authStyles.label}>Password</Text>
+              <TextInput
+                secureTextEntry
+                placeholder="Password"
+                style={authStyles.input}
+              />
+            </View>
+            <Button
+              title="Login"
+              style={authStyles.btn}
+              color="#FF9A02"
+              accessibilityLabel="Login"
+              onPress={() => navigation.navigate("Home")}
+            />
+            <Text
+              onPress={() => navigation.navigate("Register")}
+              style={authStyles.note}
+            >
+              Not having an account? register
+            </Text>
+          </View>
         </View>
-        <View style={authStyles.inputGroup}>
-          <Text style={authStyles.label}>Password</Text>
-          <TextInput
-            secureTextEntry
-            placeholder="Password"
-            style={authStyles.input}
-          />
-        </View>
-        <Button
-          title="Login"
-          style={authStyles.btn}
-          color="#FF9A02"
-          accessibilityLabel="Login"
-          onPress={() => navigation.navigate("Home")}
-        />
-        <Text style={authStyles.note}>Not having an account? register</Text>
-      </View>
-    </View>
-  );
+      );
+    }
+  };
+
+  return screenTOShow();
 }
 
 export const authStyles = StyleSheet.create({
